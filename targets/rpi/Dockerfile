@@ -11,6 +11,8 @@ ENV PACKAGES \
   libasound2 \
   alsa-utils
 
+COPY qemu-arm-static /usr/bin
+
 RUN set -xe && \
   apt-get -y update && \
   apt-get install -y ${PACKAGES} && \
